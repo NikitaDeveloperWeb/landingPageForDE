@@ -1,0 +1,27 @@
+{
+  "name": "lending",
+  "version": "1.0.0",
+  "description": "Lending page for digital element",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "node-sass -w ./scss -o ./css",
+    "sass": "sass --watch scss/style.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitaDeveloperWeb/landingPageForDE.git"
+  },
+  "author": "Rusakov Nikita <balens1aga74@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikitaDeveloperWeb/landingPageForDE/issues"
+  },
+  "homepage": "https://github.com/NikitaDeveloperWeb/landingPageForDE#readme",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "node-sass": "^7.0.1",
+    "sass": "^1.50.0"
+  }
+}
