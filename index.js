@@ -51,10 +51,8 @@ function validation() {
     messageErr = false;
   }
   if ((nameErr || emailErr || messageErr) == true) {
-    console.log(data);
     return false;
   } else {
-    console.log(data);
     return true;
   }
 }
@@ -68,3 +66,12 @@ function onSubmitForm() {
 }
 
 btn.addEventListener('click', onSubmitForm);
+
+// уведлмление об отправке формы
+
+function notification() {
+  let element = document.createElement('div');
+  element.className = 'alert';
+  element.innerHTML = 'Your message successfully sent ';
+  document.body.append(element);
+}
