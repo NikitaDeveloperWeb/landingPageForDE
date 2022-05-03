@@ -388,6 +388,11 @@ footer {
   display: none;
 }
 
+.field__error {
+  color: rgb(238, 110, 110);
+  margin-top: 2px;
+}
+
 @keyframes modalOpen {
   from {
     margin-top: -2000px;
