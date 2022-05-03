@@ -5,22 +5,24 @@ const modal = new Modal('modalButton', '#modal');
 function printError(elemId, hintMsg) {
   document.getElementById(elemId).innerHTML = hintMsg;
 }
+let FORM_FEEDBACK = document.querySelector('#form__feedback');
+let FIELD_NAME = document.getElementById('name');
+let FIELD_EMAIL = document.getElementById('email');
+let FIELD_MESSAGE = document.getElementById('message');
+let btn = document.getElementById('btn');
 
 function validation() {
-  const FORM_FEEDBACK = document.querySelector('#form__feedback');
-  const FIELD_NAME = FORM_FEEDBACK.name.value;
-  const FIELD_EMAIL = FORM_FEEDBACK.email.value;
-  const FIELD_MESSAGE = FORM_FEEDBACK.message.value;
-
   // Определяем переменные ошибок со значением по умолчанию
-  var nameErr = (emailErr = messageErr = true);
-
+  let nameErr = (emailErr = messageErr = true);
+  let name = FIELD_NAME.value;
+  let email = FIELD_EMAIL.value;
+  let message = FIELD_MESSAGE.value;
   // Проверяем имя
-  if (FIELD_NAME == '') {
+  if (name == '') {
     printError('nameErr', 'Пожалуйста, введите ваше имя');
   } else {
     var regex = /^[a-zA-Z\s]+$/;
-    if (regex.test(FIELD_NAME) === false) {
+    if (regex.test(name) === false) {
       printError('nameErr', 'Пожалуйста, введите правильное имя');
     } else {
       printError('nameErr', '');
@@ -29,12 +31,12 @@ function validation() {
   }
 
   // Проверяем адрес электронной почты
-  if (FIELD_EMAIL == '') {
+  if (email == '') {
     printError('emailErr', 'Пожалуйста, введите адрес вашей электронной почты');
   } else {
     // Регулярное выражение для базовой проверки электронной почты
     var regex = /^\S+@\S+\.\S+$/;
-    if (regex.test(FIELD_EMAIL) === false) {
+    if (regex.test(email) === false) {
       printError('emailErr', 'Пожалуйста, введите действительный адрес электронной почты');
     } else {
       printError('emailErr', '');
@@ -42,28 +44,27 @@ function validation() {
     }
   }
   // Проверяем адрес электронной почты
-  if (FIELD_MESSAGE == '') {
-    printError('messageErr', 'Пожалуйста, введите адрес вашей электронной почты');
+  if (message == '') {
+    printError('messageErr', 'Пожалуйста, введите ваше сообщение');
   } else {
     printError('messageErr', '');
-    nameErr = false;
+    messageErr = false;
   }
   if ((nameErr || emailErr || messageErr) == true) {
+    console.log(data);
     return false;
   } else {
-    let dataPreview = {
-      name: FIELD_NAME,
-      email: FIELD_EMAIL,
-      massage: FIELD_MESSAGE,
-    };
-    alert(dataPreview);
+    console.log(data);
+    return true;
   }
 }
 
 // отправка формы
 
-FORM_FEEDBACK.onsubmit = onSubmitForm;
-
 function onSubmitForm() {
-  console.log('submit');
+  if (validation()) {
+    FORM_FEEDBACK.submit();
+  }
 }
+
+btn.addEventListener('click', onSubmitForm);
