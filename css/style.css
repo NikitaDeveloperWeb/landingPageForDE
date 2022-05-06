@@ -1,3 +1,137 @@
+@media screen and (min-width: 200px) and (max-width: 768px) {
+  .header__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__content__typografy {
+    width: 100% !important;
+    align-items: center;
+    text-align: center !important;
+  }
+  .header__content__typografy button {
+    margin-top: 10px;
+  }
+  .header__content__typografy h1 {
+    font-size: 30px !important;
+  }
+  .header__content__ilustration img {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  main {
+    align-items: center !important;
+    padding: 0 !important;
+  }
+
+  .advantage {
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantage__rigth {
+    align-items: center;
+  }
+  .advantage__left {
+    align-items: center;
+  }
+
+  .cart {
+    width: 280px !important;
+  }
+
+  footer {
+    margin-top: 20px;
+  }
+
+  .client {
+    padding: 90px 0px 0px 0px !important;
+  }
+  .client__top {
+    flex-direction: column;
+  }
+  .client__top p {
+    margin-top: 10px;
+  }
+  .client__logos li {
+    border-bottom: 1px solid #fff !important;
+  }
+  .client__bottom {
+    flex-direction: column;
+  }
+  .client__bottom button {
+    margin-top: 20px;
+  }
+  .client__footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .client__footer__links {
+    margin-top: 20px;
+  }
+
+  .modalOpen {
+    width: 100%;
+  }
+  .modalOpen form {
+    width: 90% !important;
+    padding: 5px !important;
+    align-items: center !important;
+  }
+  .modalOpen__window {
+    width: 100% !important;
+  }
+  .modalOpen__window__content {
+    padding: 0 !important;
+  }
+  .modalOpen .field {
+    width: 90% !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header__content__ilustration img {
+    width: 550px !important;
+  }
+
+  main {
+    padding: 30px !important;
+  }
+
+  .cart {
+    width: 300px !important;
+  }
+
+  .modalOpen {
+    width: 100%;
+  }
+  .modalOpen form {
+    width: 90% !important;
+    padding: 5px !important;
+    align-items: center !important;
+  }
+  .modalOpen__window {
+    width: 60% !important;
+  }
+  .modalOpen__window__content {
+    padding: 0 !important;
+  }
+  .modalOpen .field {
+    width: 90% !important;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .header__content__ilustration img {
+    min-width: 550px !important;
+    max-width: 750px !important;
+  }
+
+  main {
+    padding: 30px !important;
+  }
+
+  .cart {
+    width: 300px !important;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -382,6 +516,10 @@ footer {
   border-radius: 10px;
   padding: 23px 0px 23px 0px;
   border: none;
+  cursor: pointer;
+}
+.modalOpen__window__content form button:hover {
+  background: rgb(124, 176, 221);
 }
 
 .modalClose {
