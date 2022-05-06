@@ -219,8 +219,6 @@ footer {
         background: $listLastChildcolor;
       }
     }
-    ul {
-    }
   }
   &__bottom {
     width: 90%;
@@ -242,8 +240,6 @@ footer {
         opacity: 0.6;
       }
     }
-    button {
-    }
   }
   &__footer {
     width: 90%;
@@ -256,10 +252,6 @@ footer {
     .logo {
       display: flex;
       align-items: center;
-
-      img {
-        // margin-left: 25px;
-      }
     }
     &__contacts {
       display: flex;
@@ -392,7 +384,10 @@ footer {
 .modalClose {
   display: none;
 }
-
+.field__error {
+  color: rgb(238, 110, 110);
+  margin-top: 2px;
+}
 @keyframes modalOpen {
   from {
     margin-top: -2000px;
@@ -400,4 +395,29 @@ footer {
   to {
     margin-top: 0;
   }
+}
+@keyframes notification {
+  0% {
+    top: -100px;
+  }
+  50% {
+    top: 100px;
+  }
+  100% {
+    top: -100px;
+  }
+}
+
+.alert {
+  width: 200px;
+  padding: 10px;
+  background-color: rgb(203, 255, 144);
+  position: absolute;
+  z-index: 200;
+  border: 5px;
+  text-align: center;
+  animation: notification 5.5s 1 ease-in-out;
+  top: -100px;
+  left: 40%;
+  right: 50%;
 }
