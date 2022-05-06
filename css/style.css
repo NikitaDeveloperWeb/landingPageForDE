@@ -401,5 +401,29 @@ footer {
     margin-top: 0;
   }
 }
+@keyframes notification {
+  0% {
+    top: -100px;
+  }
+  50% {
+    top: 100px;
+  }
+  100% {
+    top: -100px;
+  }
+}
+.alert {
+  width: 200px;
+  padding: 10px;
+  background-color: rgb(203, 255, 144);
+  position: absolute;
+  z-index: 200;
+  border: 5px;
+  text-align: center;
+  animation: notification 5.5s 1 ease-in-out;
+  top: -100px;
+  left: 40%;
+  right: 50%;
+}
 
 /*# sourceMappingURL=style.css.map */
