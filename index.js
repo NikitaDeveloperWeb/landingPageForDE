@@ -61,7 +61,9 @@ function validation() {
 
 function onSubmitForm() {
   if (validation()) {
-    FORM_FEEDBACK.submit();
+    fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits').then(
+      notification(),
+    );
   }
 }
 
